@@ -1,0 +1,2 @@
+/home/lun/software/anacondaII/lib/python2.7/site-packages/obspy/taup/tau_branch.py:496: UserWarning: Resizing a TauP array inplace failed due to the existence of other references to the array, creating a new array. See Obspy #2280.
+  warnings.warn(msg)
