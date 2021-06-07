@@ -1,0 +1,634 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2019 The MathWorks, Inc.
+              R2019b Update 1 (9.7.0.1216025) 64-bit (glnxa64)
+                             September 26, 2019
+
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+>> >> >> 
+=========== RUNNING INVERSION ===========
+
+>  Establishing parameters
+>  Reading in data and station details
+/home/lun/Desktop/Ptomo/tomo/BWTOMOG_atten_Vp_Vs_joint/yORCA/data/syn1000_dT_PZ.dat
+>  No data weighting
+>  Setting up geometry
+>  NO crust corrections 
+>  Creating synthetic model
+  MException with properties:
+
+    identifier: ''
+       message: 'Loaded K not appropriate for this data... build K again'
+         cause: {}
+         stack: [1x1 struct]
+    Correction: []
+
+>  Making K values...  
+Elapsed time is 10.691005 seconds.
+
+STARTING SYNTHETIC TEST
+>  Calculating synthetic data
+>  Calculating G matrix
+>  Plotting synthetic data
+>  Creating damping matrix... 
+>  creating smoothing matrix...
+>  Solving F*dm = f using biconjugate gradient method
+bicg stopped at iteration 10000 without converging to the desired tolerance 7e-05
+because the maximum number of iterations was reached.
+The iterate returned (number 5639) has relative residual 0.00038.
+Elapsed time is 8.535481 seconds.
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 780]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 390]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Text (\textbf{VP anomaly}) with properties:
+
+                 String: '\textbf{VP anomaly}'
+               FontSize: 20
+             FontWeight: 'normal'
+               FontName: 'Helvetica'
+                  Color: [0 0 0]
+    HorizontalAlignment: 'center'
+               Position: [0.5000 0.9700 0]
+                  Units: 'data'
+
+  Use GET to show all properties
+
+[Warning: no etopo data] 
+[> In plot_Zmaps_synth (line 40)
+  In synth_test_ORCA (line 192)] 
+[Warning: no topo data] 
+[> In plot_Zmaps_synth (line 150)
+  In synth_test_ORCA (line 192)] 
+
+=========== RUNNING INVERSION ===========
+
+>  Establishing parameters
+>  Reading in data and station details
+/home/lun/Desktop/Ptomo/tomo/BWTOMOG_atten_Vp_Vs_joint/yORCA/data/syn1000_dT_PZ.dat
+>  No data weighting
+>  Setting up geometry
+>  NO crust corrections 
+>  Creating synthetic model
+
+STARTING SYNTHETIC TEST
+>  Calculating synthetic data
+>  Calculating G matrix
+>  Plotting synthetic data
+>  Creating damping matrix... 
+>  creating smoothing matrix...
+>  Solving F*dm = f using biconjugate gradient method
+bicg converged at iteration 899 to a solution with relative residual 6.8e-05.
+Elapsed time is 2.110131 seconds.
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 780]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 390]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Text (\textbf{VP anomaly}) with properties:
+
+                 String: '\textbf{VP anomaly}'
+               FontSize: 20
+             FontWeight: 'normal'
+               FontName: 'Helvetica'
+                  Color: [0 0 0]
+    HorizontalAlignment: 'center'
+               Position: [0.5000 0.9700 0]
+                  Units: 'data'
+
+  Use GET to show all properties
+
+[Warning: no etopo data] 
+[> In plot_Zmaps_synth (line 40)
+  In synth_test_ORCA (line 192)] 
+[Warning: no topo data] 
+[> In plot_Zmaps_synth (line 150)
+  In synth_test_ORCA (line 192)] 
+
+=========== RUNNING INVERSION ===========
+
+>  Establishing parameters
+>  Reading in data and station details
+/home/lun/Desktop/Ptomo/tomo/BWTOMOG_atten_Vp_Vs_joint/yORCA/data/syn1000_dT_PZ.dat
+>  No data weighting
+>  Setting up geometry
+>  NO crust corrections 
+>  Creating synthetic model
+
+STARTING SYNTHETIC TEST
+>  Calculating synthetic data
+>  Calculating G matrix
+>  Plotting synthetic data
+>  Creating damping matrix... 
+>  creating smoothing matrix...
+>  Solving F*dm = f using biconjugate gradient method
+bicg converged at iteration 574 to a solution with relative residual 6.1e-05.
+Elapsed time is 1.851641 seconds.
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 780]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 390]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Text (\textbf{VP anomaly}) with properties:
+
+                 String: '\textbf{VP anomaly}'
+               FontSize: 20
+             FontWeight: 'normal'
+               FontName: 'Helvetica'
+                  Color: [0 0 0]
+    HorizontalAlignment: 'center'
+               Position: [0.5000 0.9700 0]
+                  Units: 'data'
+
+  Use GET to show all properties
+
+[Warning: no etopo data] 
+[> In plot_Zmaps_synth (line 40)
+  In synth_test_ORCA (line 192)] 
+[Warning: no topo data] 
+[> In plot_Zmaps_synth (line 150)
+  In synth_test_ORCA (line 192)] 
+
+=========== RUNNING INVERSION ===========
+
+>  Establishing parameters
+>  Reading in data and station details
+/home/lun/Desktop/Ptomo/tomo/BWTOMOG_atten_Vp_Vs_joint/yORCA/data/syn1000_dT_PZ.dat
+>  No data weighting
+>  Setting up geometry
+>  NO crust corrections 
+>  Creating synthetic model
+
+STARTING SYNTHETIC TEST
+>  Calculating synthetic data
+>  Calculating G matrix
+>  Plotting synthetic data
+>  Creating damping matrix... 
+>  creating smoothing matrix...
+>  Solving F*dm = f using biconjugate gradient method
+bicg converged at iteration 461 to a solution with relative residual 6e-05.
+Elapsed time is 1.660172 seconds.
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 780]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 390]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Text (\textbf{VP anomaly}) with properties:
+
+                 String: '\textbf{VP anomaly}'
+               FontSize: 20
+             FontWeight: 'normal'
+               FontName: 'Helvetica'
+                  Color: [0 0 0]
+    HorizontalAlignment: 'center'
+               Position: [0.5000 0.9700 0]
+                  Units: 'data'
+
+  Use GET to show all properties
+
+[Warning: no etopo data] 
+[> In plot_Zmaps_synth (line 40)
+  In synth_test_ORCA (line 192)] 
+[Warning: no topo data] 
+[> In plot_Zmaps_synth (line 150)
+  In synth_test_ORCA (line 192)] 
+
+=========== RUNNING INVERSION ===========
+
+>  Establishing parameters
+>  Reading in data and station details
+/home/lun/Desktop/Ptomo/tomo/BWTOMOG_atten_Vp_Vs_joint/yORCA/data/syn1000_dT_PZ.dat
+>  No data weighting
+>  Setting up geometry
+>  NO crust corrections 
+>  Creating synthetic model
+
+STARTING SYNTHETIC TEST
+>  Calculating synthetic data
+>  Calculating G matrix
+>  Plotting synthetic data
+>  Creating damping matrix... 
+>  creating smoothing matrix...
+>  Solving F*dm = f using biconjugate gradient method
+bicg converged at iteration 349 to a solution with relative residual 6.5e-05.
+Elapsed time is 1.649888 seconds.
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 780]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 390]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Text (\textbf{VP anomaly}) with properties:
+
+                 String: '\textbf{VP anomaly}'
+               FontSize: 20
+             FontWeight: 'normal'
+               FontName: 'Helvetica'
+                  Color: [0 0 0]
+    HorizontalAlignment: 'center'
+               Position: [0.5000 0.9700 0]
+                  Units: 'data'
+
+  Use GET to show all properties
+
+[Warning: no etopo data] 
+[> In plot_Zmaps_synth (line 40)
+  In synth_test_ORCA (line 192)] 
+[Warning: no topo data] 
+[> In plot_Zmaps_synth (line 150)
+  In synth_test_ORCA (line 192)] 
+
+=========== RUNNING INVERSION ===========
+
+>  Establishing parameters
+>  Reading in data and station details
+/home/lun/Desktop/Ptomo/tomo/BWTOMOG_atten_Vp_Vs_joint/yORCA/data/syn1000_dT_PZ.dat
+>  No data weighting
+>  Setting up geometry
+>  NO crust corrections 
+>  Creating synthetic model
+
+STARTING SYNTHETIC TEST
+>  Calculating synthetic data
+>  Calculating G matrix
+>  Plotting synthetic data
+>  Creating damping matrix... 
+>  creating smoothing matrix...
+>  Solving F*dm = f using biconjugate gradient method
+bicg converged at iteration 396 to a solution with relative residual 6.5e-05.
+Elapsed time is 1.623922 seconds.
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 780]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 390]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Text (\textbf{VP anomaly}) with properties:
+
+                 String: '\textbf{VP anomaly}'
+               FontSize: 20
+             FontWeight: 'normal'
+               FontName: 'Helvetica'
+                  Color: [0 0 0]
+    HorizontalAlignment: 'center'
+               Position: [0.5000 0.9700 0]
+                  Units: 'data'
+
+  Use GET to show all properties
+
+[Warning: no etopo data] 
+[> In plot_Zmaps_synth (line 40)
+  In synth_test_ORCA (line 192)] 
+[Warning: no topo data] 
+[> In plot_Zmaps_synth (line 150)
+  In synth_test_ORCA (line 192)] 
+
+=========== RUNNING INVERSION ===========
+
+>  Establishing parameters
+>  Reading in data and station details
+/home/lun/Desktop/Ptomo/tomo/BWTOMOG_atten_Vp_Vs_joint/yORCA/data/syn1000_dT_PZ.dat
+>  No data weighting
+>  Setting up geometry
+>  NO crust corrections 
+>  Creating synthetic model
+
+STARTING SYNTHETIC TEST
+>  Calculating synthetic data
+>  Calculating G matrix
+>  Plotting synthetic data
+>  Creating damping matrix... 
+>  creating smoothing matrix...
+>  Solving F*dm = f using biconjugate gradient method
+bicg converged at iteration 374 to a solution with relative residual 6.4e-05.
+Elapsed time is 1.645812 seconds.
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 780]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 390]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Text (\textbf{VP anomaly}) with properties:
+
+                 String: '\textbf{VP anomaly}'
+               FontSize: 20
+             FontWeight: 'normal'
+               FontName: 'Helvetica'
+                  Color: [0 0 0]
+    HorizontalAlignment: 'center'
+               Position: [0.5000 0.9700 0]
+                  Units: 'data'
+
+  Use GET to show all properties
+
+[Warning: no etopo data] 
+[> In plot_Zmaps_synth (line 40)
+  In synth_test_ORCA (line 192)] 
+[Warning: no topo data] 
+[> In plot_Zmaps_synth (line 150)
+  In synth_test_ORCA (line 192)] 
+
+=========== RUNNING INVERSION ===========
+
+>  Establishing parameters
+>  Reading in data and station details
+/home/lun/Desktop/Ptomo/tomo/BWTOMOG_atten_Vp_Vs_joint/yORCA/data/syn1000_dT_PZ.dat
+>  No data weighting
+>  Setting up geometry
+>  NO crust corrections 
+>  Creating synthetic model
+
+STARTING SYNTHETIC TEST
+>  Calculating synthetic data
+>  Calculating G matrix
+>  Plotting synthetic data
+>  Creating damping matrix... 
+>  creating smoothing matrix...
+>  Solving F*dm = f using biconjugate gradient method
+bicg converged at iteration 267 to a solution with relative residual 6.6e-05.
+Elapsed time is 1.529310 seconds.
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 780]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 390]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Text (\textbf{VP anomaly}) with properties:
+
+                 String: '\textbf{VP anomaly}'
+               FontSize: 20
+             FontWeight: 'normal'
+               FontName: 'Helvetica'
+                  Color: [0 0 0]
+    HorizontalAlignment: 'center'
+               Position: [0.5000 0.9700 0]
+                  Units: 'data'
+
+  Use GET to show all properties
+
+[Warning: no etopo data] 
+[> In plot_Zmaps_synth (line 40)
+  In synth_test_ORCA (line 192)] 
+[Warning: no topo data] 
+[> In plot_Zmaps_synth (line 150)
+  In synth_test_ORCA (line 192)] 
+
+=========== RUNNING INVERSION ===========
+
+>  Establishing parameters
+>  Reading in data and station details
+/home/lun/Desktop/Ptomo/tomo/BWTOMOG_atten_Vp_Vs_joint/yORCA/data/syn1000_dT_PZ.dat
+>  No data weighting
+>  Setting up geometry
+>  NO crust corrections 
+>  Creating synthetic model
+
+STARTING SYNTHETIC TEST
+>  Calculating synthetic data
+>  Calculating G matrix
+>  Plotting synthetic data
+>  Creating damping matrix... 
+>  creating smoothing matrix...
+>  Solving F*dm = f using biconjugate gradient method
+bicg converged at iteration 299 to a solution with relative residual 6e-05.
+Elapsed time is 1.533519 seconds.
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 780]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Figure (88) with properties:
+
+      Number: 88
+        Name: ''
+       Color: [0.9400 0.9400 0.9400]
+    Position: [30 20 580 390]
+       Units: 'pixels'
+
+  Use GET to show all properties
+
+
+ans = 
+
+  Text (\textbf{VP anomaly}) with properties:
+
+                 String: '\textbf{VP anomaly}'
+               FontSize: 20
+             FontWeight: 'normal'
+               FontName: 'Helvetica'
+                  Color: [0 0 0]
+    HorizontalAlignment: 'center'
+               Position: [0.5000 0.9700 0]
+                  Units: 'data'
+
+  Use GET to show all properties
+
+[Warning: no etopo data] 
+[> In plot_Zmaps_synth (line 40)
+  In synth_test_ORCA (line 192)] 
+[Warning: no topo data] 
+[> In plot_Zmaps_synth (line 150)
+  In synth_test_ORCA (line 192)] 

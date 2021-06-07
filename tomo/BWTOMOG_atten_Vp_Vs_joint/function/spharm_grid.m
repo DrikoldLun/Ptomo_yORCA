@@ -1,0 +1,29 @@
+function [Ylmgrid] = spharm_grid(L,M,dlat,dlon)
+% [Ylmgrid] = spharm_grid(L,M,dlon,dlat)
+% function to calculate spherical harmonic at a grid of points on the
+% Earth defined by the mid-points of lat/lon boxes with height and width
+% (respectively) given in degrees by dlon and dlat. i.e. dlon = dlat = 5
+% would give a 36x72 grid, going
+% (87.5,-177.5)  (87.5,-172.5)  (87.5,-167.5)   ...     (87.5,177.5)
+% (82.5,-177.5)  (82.5,-172.5)       ...        ...     (82.5,177.5)
+%      ...            ...            ...        ...     	...
+% (-87.5,-177.5)      ...            ...    	...     (-87.5,177.5)
+
+lats = linspace(90 - dlat/2, dlat/2 - 90,180/dlat);
+lons = linspace(dlon/2 - 180, 180 - dlon/2,360/dlon);
+Ylmgrid = zeros(length(lats),length(lons));
+
+for ila = 1:length(lats)
+for ilo = 1:length(lons)
+    P = legendre(L,cosd(90-lats(ila)));
+    Ylmgrid(ila,ilo) = P(M+1)*exp(1i*M*d2r(lons(ilo)));
+end
+end
+a1 = (2*L + 1)/(4*pi);
+a2 = factorial(L-M)/factorial(L+M);
+a3 = sqrt(a1*a2);
+Ylmgrid = Ylmgrid*a3;
+end
+
+
+

@@ -1,0 +1,78 @@
+function [ H_smooth ] = make_smoothmat( par )
+% smooth using first derivative!!:
+
+fprintf('>  creating smoothing matrix...\n')
+
+zvh = par.smth_zvh; %0.3 ratio of vertical to horizontal smoothing
+
+%% smooth nodes horizontally
+%% xdirection
+nnx = (par.nx-2)*par.ny*par.nz;
+rxi = zeros(2*nnx,1);
+rxj = zeros(2*nnx,1);
+rx  = zeros(2*nnx,1);
+k = 0;
+for ix = 1:par.nx-2
+    for iy = 1:par.ny
+        for iz = 1:par.nz
+            k = k+1;
+            indx = find(par.mx==par.xx(ix) & par.my==par.yy(iy) & par.mz==par.zz(iz));
+            indxp1 = find(par.mx==par.xx(ix+1) & par.my==par.yy(iy) & par.mz==par.zz(iz));
+	    indxp2 = find(par.mx==par.xx(ix+2) & par.my==par.yy(iy) & par.mz==par.zz(iz));
+            rxi(3*k + [-2 -1 0]) = k; % put two into k-th row
+            rxj(3*k + [-2 -1 0]) = [indx indxp1 indxp2]; % put in column related to ix and ix+1
+            rx( 3*k + [-2 -1 0]) = [1 -2 1]*par.dh/(abs(par.xx(ix+1)-par.xx(ix))^2); % weight by 1/distance between pt ix and ix+1
+        end
+    end
+end
+
+%% ydirection
+nny = par.nx*(par.ny-2)*par.nz;
+ryi = zeros(2*nny,1);
+ryj = zeros(2*nny,1);
+ry  = zeros(2*nny,1);
+k = 0;
+for ix = 1:par.nx
+    for iy = 1:par.ny-2
+        for iz = 1:par.nz
+            k = k+1;
+            indy = find(par.mx==par.xx(ix) & par.my==par.yy(iy) & par.mz==par.zz(iz));
+            indyp1 = find(par.mx==par.xx(ix) & par.my==par.yy(iy+1) & par.mz==par.zz(iz));
+	    indyp2 = find(par.mx==par.xx(ix) & par.my==par.yy(iy+2) & par.mz==par.zz(iz));
+            ryi(3*k + [-2 -1 0]) = k; % put two into k-th row
+            ryj(3*k + [-2 -1 0]) = [indy indyp1 indyp2]; % put in column related to iy and iy+1
+            ry( 3*k + [-2 -1 0]) = [1 -2 1]*par.dh/(abs(par.yy(iy+1)-par.yy(iy))^2); % weight by 1/distance between pt iy and iy+1
+        end
+    end
+end
+
+%% smooth nodes vertically
+%% zdirection
+nnz = par.nx*par.ny*(par.nz-2);
+rzi = zeros(2*nnz,1);
+rzj = zeros(2*nnz,1);
+rz  = zeros(2*nnz,1);
+k = 0;
+for ix = 1:par.nx
+    for iy = 1:par.ny
+        for iz = 1:par.nz-2
+            k = k+1;
+            indz = find(par.mx==par.xx(ix) & par.my==par.yy(iy) & par.mz==par.zz(iz));
+            indzp1 = find(par.mx==par.xx(ix) & par.my==par.yy(iy) & par.mz==par.zz(iz+1));
+	    indzp2 = find(par.mx==par.xx(ix) & par.my==par.yy(iy) & par.mz==par.zz(iz+2));
+            rzi(3*k + [-2 -1 0]) = k; % put two into k-th row
+            rzj(3*k + [-2 -1 0]) = [indz indzp1 indzp2]; % put in column related to iz and iz+1
+            rz( 3*k + [-2 -1 0]) = [1 -2 1]*par.dh/(abs(par.zz(iz+1)-par.zz(iz))^2); % weight by 1/distance^2 between pt iz and iz+1
+        end
+    end
+end
+
+%% Compile
+Rx = sparse(rxi,rxj,rx,nnx,par.nmodel);
+Ry = sparse(ryi,ryj,ry,nny,par.nmodel);
+Rz = sparse(rzi,rzj,rz,nnz,par.nmodel);
+
+H_smooth = [ Rx ;       % smooths in x-dir
+             Ry ;       % smooths in y-dir
+             Rz*zvh ];  % smooths in z-dir
+end
