@@ -317,9 +317,9 @@ close(1)
 
 end
 if ~is2D
-    ofile = ['sqztest_',type,'_',direction,'.mat'];
+    ofile = ['sqztest/sqztest_',type,'_',direction,'.mat'];
 else
-    ofile = ['sqztest_',type,'_',direction,'_2D.mat'];
+    ofile = ['sqztest/sqztest_',type,'_',direction,'_2D.mat'];
 end
 save(ofile,'squeezetest','par')
 

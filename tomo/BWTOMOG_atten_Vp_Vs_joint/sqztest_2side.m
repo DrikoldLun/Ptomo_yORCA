@@ -248,9 +248,9 @@ is = is + 1;
 end
 end
 if ~is2D
-    ofile = ['sqz2side_',type,'.mat'];
+    ofile = ['sqztest_2side/sqz2side_',type,'.mat'];
 else
-    ofile = ['sqz2side_',type,'_2D.mat'];
+    ofile = ['sqztest_2side/sqz2side_',type,'_2D.mat'];
 end
 save(ofile,'squeezetest','par')
 
