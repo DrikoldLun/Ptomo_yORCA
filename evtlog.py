@@ -2,7 +2,7 @@ import os, glob, obspy, configparser
 import numpy as np
 
 
-evtlog_path = 'evtlog_newsta'
+evtlog_path = 'evtlog'
 if not os.path.exists(evtlog_path): os.mkdir(evtlog_path)
 
 def evt_catalog(ch,ch_path,evtlog_path):

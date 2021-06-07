@@ -20,13 +20,10 @@ dbname = 'yORCA';
 fprintf('>  Establishing parameters\n')
 %cd(wd);
 run([dbname,'/PARMS'])
-%datfile = 'yORCA/data/PZmix.dat'; %2,5
+datfile = 'yORCA/data/PZmix.dat'; %2,5
 %datfile = 'yORCA/data/Z_mag_5.5_10.0.dat'; %1,5
-datfile = 'yORCA/data/PZ_direct_num.dat';%2,5
+%datfile = 'yORCA/data/PZ_direct_num.dat';%2,5
 %datfile = 'yORCA/data/P_mag_6.0_10.0.dat'; %2,5
-par.damp = 2;
-par.smooth = 5;
-par.dampx = 1000;
 basename = split(datfile,'/');
 type = replace(basename{end},'.dat','');
 disp(type)
@@ -35,8 +32,8 @@ if ~isdir(K_dir)
     mkdir(K_dir)
 end
 startup_seizmo;
-rotate_test.angle = -[0:5:180]';
-%rotate_test.angle = -[0:5:30]';
+%rotate_test.angle = -[0:5:180]';
+rotate_test.angle = -[0:5:30]';
 num = length(rotate_test.angle);
 rotate_test.resid = zeros(num,1);
 rotate_test.vr = zeros(num,1);

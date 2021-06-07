@@ -45,7 +45,7 @@ driftsta2 = ['CC03','EC01','EC03']
 #extrasta = ['EC01']
 extrasta = []
     
-def get_para(head='../paraP.cfg',ccch='P'):
+def get_para(head='../paraP.cfg',ccch='Z'):
     # type: P, Z, PandZ, PorZ
     '''
     try:

@@ -1,8 +1,12 @@
 clear all
 close all
 global F f G res dbname
+try
+    shutdown_seizmo;
+catch
+    1;
+end
 addpath('matguts','plotting','function','seizmo');
-
 % profile on
 %cd ~/Documents/MATLAB/CASC_atten/TOMOGRAPHY
 %% ALL PARMS ESTABLISHED IN PARMFILE
@@ -15,10 +19,6 @@ dbname = 'yORCA';
 fprintf('>  Establishing parameters\n')
 %cd(wd);
 run([dbname,'/PARMS'])
-%datfile = 'yORCA/data/PZmix.dat'; %2,5
-%datfile = 'yORCA/data/Z_mag_5.5_10.0.dat'; %1,5
-datfile = 'yORCA/data/PZ_direct_num.dat';%2,5
-%datfile = 'yORCA/data/P_mag_6.0_10.0.dat'; %2,5
 basename = split(datfile,'/');
 type = replace(basename{end},'.dat','');
 startup_seizmo;
@@ -30,16 +30,16 @@ saveopt = 0;
 resid2rough = 10; %relative scaling in penalty between roughness and residual 
 % (higher minimises residual, lower minimises roughness)
 % preferred value around 0.5 (since resids are higher already)
-odir = './Ltest_flatness/';
+odir = './';
 
 Ltest = struct([]);
 
-Ltest(1).damp = [0:0.5:10]'; % was logspace(-2,2,21)
-Ltest.smooth =  [0:0.5:10]'; % was logspace(-2,2,21)
+%Ltest(1).damp = [1:1:10]'; % was logspace(-2,2,21)
+%Ltest.smooth =  [1:1:10]'; % was logspace(-2,2,21)
 %Ltest(1).damp = 3*logspace(-2,1,9)'; % was logspace(-2,2,21)
 %Ltest.smooth =  [.1,1,3,10,15,20,30]; % was logspace(-2,2,21)
-%Ltest(1).damp = [.1, .2]'; % was logspace(-2,2,21)
-%Ltest.smooth =  [.1]; 
+Ltest(1).damp = [2.]; % was logspace(-2,2,21)
+Ltest.smooth =  [5.]; 
 
 Nd = length(Ltest.damp);
 Ns = length(Ltest.smooth);
@@ -48,7 +48,6 @@ Ltest.resid     = nan(Nd,Ns);
 Ltest.norm      = nan(Nd,Ns);
 Ltest.vr        = nan(Nd,Ns);
 Ltest.vr_hq     = nan(Nd,Ns);
-Ltest.smth 	= nan(Nd,Ns);
 Ltest.wvr       = nan(Nd,Ns);
 Ltest.norm_estt = nan(Nd,Ns);
 Ltest.norm_sstt = nan(Nd,Ns);
@@ -202,6 +201,6 @@ datstr = {'dT','dtstar'};
 PSstr = {'PZ','ST'};
 ofile = [odir,'Ltest_',datstr{par.t_ts},'_',type,'.mat'];
 
-save(ofile,'Ltest')
+%save(ofile,'Ltest')
 
 %plot_Lcurves
